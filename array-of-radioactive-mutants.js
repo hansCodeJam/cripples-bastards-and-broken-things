@@ -12,7 +12,7 @@ function addMeToStart(arr) {
 }
 
 function changeAllValuesTo(arr, value) {
-  const i = 0;
+  let i = 0;
 
   while (i < arr.length) {
     arr[i] = value;
