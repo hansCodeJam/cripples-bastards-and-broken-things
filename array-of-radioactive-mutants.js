@@ -1,13 +1,14 @@
 function changeLast(arr, value) {
+  arr.pop();
   arr.push(value);
 }
 
 function addMeToEnd(arr) {
-  arr.pop('Colin')
+  arr.push('Colin')
 }
 
 function addMeToStart(arr) {
-  arr.shift('Colin')
+  arr.unshift('Colin')
 }
 
 function changeAllValuesTo(arr, value) {
@@ -24,10 +25,10 @@ function oddOrEven(arr) {
   let i = 0;
 
   while (i < arr.length) {
-    if (arr[i] % 2 === 0) {
-      return 'even'
+    if (arr[i] % 2 === 1) {
+      arr[i] = 'even'
     } else {
-      return 'odd'
+      arr[i] = 'odd'
     }
 
     i++;
@@ -36,10 +37,12 @@ function oddOrEven(arr) {
 
 function changeNextThreeToValue(start, arr, value) {
   let i = start;
+  let count = 0;
 
-  while (i <= start + 3) {
+  while (i < arr.length && count < 3) {
     arr[i] = value;
 
+    count++;
     i++;
   }
 }

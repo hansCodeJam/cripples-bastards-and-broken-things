@@ -13,7 +13,7 @@ function repeat(str, repetitions) {
   
   let count = 1;
   while (count <= repetitions) {
-    repeated + str;
+    repeated += str;
     count++;
   }
   
@@ -22,15 +22,15 @@ function repeat(str, repetitions) {
 
 function startsWith(string, substring) {
   for (let i = 0; i < string.length; i++) {
-    if (string[i] !== substring[i]) {
-      return false;
+    if (string[i][0] === substring[i]) {
+      return true;
     }
   }
 
-  return true;
+  return false;
 }
 
-function endsWith(str) {
+function endsWith(str,substring) {
   for (let i = 0; i <= substring.length; i++) {
     const substringIndex = substring.length - i;
     const strIndex = str.length - i;
